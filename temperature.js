@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const mysql = require('mysql')
 const port = 9000
 
 var exec = require('child_process').exec;
@@ -34,7 +35,7 @@ function getLastDaysTemperatures(nb_days, cb){
 
 app.get('/getTemperatures', function(req,res){
         let nb_days =7
-        getLastDayTemperatures(nb_days, (err, dataTemp) => {
+        getLastDaysTemperatures(nb_days, (err, dataTemp) => {
                 if (dataTemp){
                         // return res.json(dataTemp)
                         return res.send(JSON.stringify(dataTemp))
