@@ -1,0 +1,15 @@
+{
+    "development": {
+        "config_id": "development",
+        "node_port": 9000,
+        "BDD":{
+"host": "localhost",
+"user": "rasp",
+"pass": "altUnsyint"
+        },
+        "nb_jours_temperatures" : 3
+    },
+    "production": {
+        "config_id": "production"
+    }
+}
